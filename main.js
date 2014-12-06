@@ -349,7 +349,7 @@ Enemy.prototype =
   {
     this.dt += dt;
 
-    if(this.dt < 220)
+    if(this.dt < 100)
       return;
 
     this.dt = 0;
