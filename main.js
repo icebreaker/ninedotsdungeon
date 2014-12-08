@@ -1,4 +1,16 @@
 /* Nine Dots Dungeon for Ludum Dare 31, Mihail Szabolcs, 2014 */
+if(!window.requestAnimationFrame)
+{
+  window.requestAnimationFrame = (function()
+  {
+    return window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback, element) { window.setTimeout(callback, 1000 / 60);  };
+  })();
+}
+
 function Rect()
 {
   this.initialize.apply(this, arguments);
